@@ -1,4 +1,4 @@
-# avatar
+# avatar-player
 
 ## Project setup
 ```
