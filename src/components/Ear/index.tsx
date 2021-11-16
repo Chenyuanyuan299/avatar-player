@@ -10,19 +10,19 @@ import Small from './Small';
 // Types
 import type { PropType } from 'vue';
 
-export type EarSize = 'small' | 'big';
+export type EarStyle = 'small' | 'big';
 
 export default defineComponent({
   // name: createName('avatar', 'ear'),
 
   props: {
     color: String,
-    size: String as PropType<EarSize>,
+    style: String as PropType<EarStyle>,
   },
 
   setup(props) {
     const renderEar = () => {
-      switch (props.size) {
+      switch (props.style) {
         case 'big':
           return <Big color={props.color} />;
         case 'small':

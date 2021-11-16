@@ -1,9 +1,19 @@
 {
   "name": "avatar-player",
   "version": "0.1.0",
-  "private": true,
-  "main": "./dist/holiday-avatar.umd.js",
-  "module": "./dist/holiday-avatar.es.js",
+  "description": "This is a avatar making machine.(Based on react-nice-avatar)",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/avatar-player.umd.js",
+  "module": "./dist/avatar-player.esm.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/avatar-player.esm.js",
+      "require": "./dist/avatar-player.umd.js"
+    }
+  },
   "scripts": {
     "dev": "rimraf demo/dist && NODE_ENV=development rollup -w -c rollup.config.demo.ts",
     "build:pkg": "rimraf dist && rollup -c && copyfiles -f src/index.d.ts dist",
@@ -12,14 +22,13 @@
   },
   "dependencies": {
     "chroma-js": "^2.1.2",
-    "core-js": "^3.6.5",
-    "lodash": "^4.17.21",
-    "vue": "^3.0.0"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.14.5",
+    "@vue/babel-plugin-jsx": "^1.0.6",
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "@rollup/plugin-alias": "^3.1.2",
@@ -43,7 +52,8 @@
     "rollup-plugin-windicss": "^1.1.1",
     "sass": "^1.35.1",
     "tslib": "^2.3.0",
-    "typescript": "^4.4.4"
+    "typescript": "^4.4.4",
+    "vue": "^3.1.2"
   },
   "eslintConfig": {
     "root": true,
