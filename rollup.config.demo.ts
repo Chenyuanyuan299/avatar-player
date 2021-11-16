@@ -36,7 +36,7 @@ export default defineConfig({
     }),
     alias({
       entries: {
-        'holiday-avatar': path.resolve(__dirname, 'src'),
+        'avatar-player': path.resolve(__dirname, 'src'),
       },
     }),
     resolve(),

@@ -16,7 +16,7 @@ export default defineConfig({
     {
       exports: 'named',
       file: pkg.module,
-      name: 'holiday-avatar',
+      name: 'avatar-player',
       format: 'esm',
       globals: {
         vue: 'Vue',
@@ -25,7 +25,7 @@ export default defineConfig({
     {
       exports: 'named',
       file: pkg.main,
-      name: 'holiday-avatar',
+      name: 'avatar-player',
       format: 'umd',
       globals: {
         vue: 'Vue',
