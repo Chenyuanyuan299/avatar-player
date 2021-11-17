@@ -67,14 +67,14 @@ const bgColor = ['#9287ff', '#6bd9e9', '#fc909f', '#f4d150', '#e0ddff',
   '#d2eff3', '#ffedef', '#ffeba4', '#506af4', '#f48150', '#74d153',
 ];
 const earStyle: EarStyle[] = ['small', 'big'];
-const eyeBrowFemale: EyeBrowStyle[] = ['upMale', 'upFemale'];
+const eyeBrowFemale: EyeBrowStyle[] = ['upMale', 'upFemale', 'human'];
 const eyesStyle: EyesStyle[] = ['circle', 'oval', 'smile'];
 const glassesStyle: GlassesStyle[] = ['round', 'square', 'none'];
 const hairStyleMale: HairStyle[] = ['normal', 'thick', 'mohawk'];
 const hairStyleFemale: HairStyle[] = ['normal', 'femaleLong', 'femaleShort'];
 const hatStyle: HatStyle[] = ['none', 'beanie', 'turban'];
 const mouthStyle: MouthStyle[] = ['laugh', 'smile', 'peace'];
-const noseStyle: NoseStyle[] = ['short', 'long', 'round'];
+const noseStyle: NoseStyle[] = ['short', 'long', 'round','straight'];
 const shirtStyle: ShirtStyle[] = ['hoody', 'short', 'polo'];
 const sex: AvatarSex[] = ['male', 'female'];
 

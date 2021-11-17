@@ -11,19 +11,43 @@ export default defineComponent({
           top: '0',
         }}
         width="149"
-        height="48"
-        viewBox="0 0 149 48"
+        height="51"
+        viewBox="0 0 149 51"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M99 10.2143C104.667 7.5476 118 5.11427 126 16.7143"
+          d="M26.0742 32.4578L19.9258 27.0312"
           stroke="black"
           stroke-width="4"
           stroke-linecap="round"
         />
         <path
-          d="M23.5791 35.521C25.6497 29.6104 33.2612 18.3959 47.1418 20.8224"
+          d="M122.961 14.157L129.109 8.73047"
+          stroke="black"
+          stroke-width="4"
+          stroke-linecap="round"
+        />
+        <path
+          d="M32.5233 26.8142L28.4766 19.6816"
+          stroke="black"
+          stroke-width="4"
+          stroke-linecap="round"
+        />
+        <path
+          d="M115.512 10.5135L119.559 3.38086"
+          stroke="black"
+          stroke-width="4"
+          stroke-linecap="round"
+        />
+        <path
+          d="M40.5994 23.2005L38.3984 15.3008"
+          stroke="black"
+          stroke-width="4"
+          stroke-linecap="round"
+        />
+        <path
+          d="M106.436 9.89973L108.637 2"
           stroke="black"
           stroke-width="4"
           stroke-linecap="round"
