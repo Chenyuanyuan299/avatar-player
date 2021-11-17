@@ -15,13 +15,14 @@
     }
   },
   "scripts": {
-    "dev": "rimraf demo/dist && NODE_ENV=development rollup -w -c rollup.config.demo.ts",
+    "dev": "rimraf demo/dist && cross-env NODE_ENV=development rollup -w -c rollup.config.demo.ts",
     "build:pkg": "rimraf dist && rollup -c && copyfiles -f src/index.d.ts dist",
     "build:demo": "rimraf demo/dist && rollup -c rollup.config.demo.ts",
     "prepare": "npm run build:pkg"
   },
   "dependencies": {
     "chroma-js": "^2.1.2",
+    "cross-env": "^7.0.3",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
