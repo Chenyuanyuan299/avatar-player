@@ -246,7 +246,6 @@ export default defineComponent({
               config.hairStyle !== 'beanie' &&
               <Hat color={config.hatColor} type={config.hatStyle} />
             }
-            
             <Hair color={config.hairColor} type={config.hairStyle} colorRandom={props.hairColorRandom} />
             <Face color={config.faceColor as string} />
             <div
