@@ -9,8 +9,10 @@ import createName from '@/utils/createName';
 
 // Types
 import type { PropType } from 'vue';
+import Butterfly from './Butterfly';
+import Cap from './Cap';
 
-export type HatStyle = 'none' | 'beanie' | 'turban';
+export type HatStyle = 'none' | 'beanie' | 'turban' | 'butterfly' | 'cap';
 
 export default defineComponent({
   name: createName('avatar', 'hat'),
@@ -29,6 +31,10 @@ export default defineComponent({
           return <Beanie color={props.color} />;
         case 'turban':
           return <Turban color={props.color} />;
+        case 'butterfly':
+          return <Butterfly />
+        case 'cap':
+          return <Cap />
         default:
           return;
       }

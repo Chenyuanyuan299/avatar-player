@@ -12,13 +12,13 @@ import createName from '@/utils/createName';
 import type { PropType } from 'vue';
 
 
-export type EyeBrowStyle = 'upMale' | 'upFemale' | 'human';
+export type EyebrowStyle = 'upMale' | 'upFemale' | 'human';
 
 export default defineComponent({
   name: createName('avatar', 'eye', 'brow'),
 
   props: {
-    type: String as PropType<EyeBrowStyle>,
+    type: String as PropType<EyebrowStyle>,
   },
 
   setup(props) {

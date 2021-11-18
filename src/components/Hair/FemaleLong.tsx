@@ -15,6 +15,7 @@ export default defineComponent({
           bottom: '-2.2%',
           width: '97%',
           height: '100%',
+          zIndex:888
         }}
         width="306"
         height="331"

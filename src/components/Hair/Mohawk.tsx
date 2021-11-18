@@ -28,6 +28,7 @@ export default defineComponent({
             width: '97.6%',
             height: '63.5%',
             left: '-1.8%',
+            zIndex:888
           }}
           width="240"
           height="203"
