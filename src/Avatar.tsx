@@ -67,9 +67,9 @@ const earStyle: EarStyle[] = ['small', 'big'];
 const eyebrowFemale: EyebrowStyle[] = ['upMale', 'upFemale','human'];
 const eyesStyle: EyesStyle[] = ['circle', 'oval', 'smile'];
 const glassesStyle: GlassesStyle[] = ['round', 'square', 'none'];
-const hairStyleMale: HairStyle[] = ['normal', 'thick', 'mohawk'];
-const hairStyleFemale: HairStyle[] = ['normal', 'femaleLong', 'femaleShort'];
-const hatStyle: HatStyle[] = ['none', 'beanie', 'turban','butterfly','cap'];
+const hairStyleMale: HairStyle[] = ['normal', 'thick', 'mohawk', 'beanie', 'turban'];
+const hairStyleFemale: HairStyle[] = ['normal', 'femaleLong', 'femaleShort', 'beanie', 'turban'];
+const hatStyle: HatStyle[] = ['none','butterfly','cap'];
 const mouthStyle: MouthStyle[] = ['laugh', 'smile', 'peace'];
 const noseStyle: NoseStyle[] = ['short', 'long', 'round','straight'];
 const shirtStyle: ShirtStyle[] = ['hoody', 'short', 'polo'];
@@ -242,7 +242,11 @@ export default defineComponent({
               height: '90%',
             }}
           >
-            <Hat color={config.hatColor} type={config.hatStyle} />
+            {
+              config.hairStyle !== 'beanie' &&
+              <Hat color={config.hatColor} type={config.hatStyle} />
+            }
+            
             <Hair color={config.hairColor} type={config.hairStyle} colorRandom={props.hairColorRandom} />
             <Face color={config.faceColor as string} />
             <div

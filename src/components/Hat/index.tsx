@@ -1,18 +1,17 @@
 import { defineComponent } from 'vue';
 
 // Components
-import Beanie from './Beanie';
-import Turban from './Turban';
+import Butterfly from './Butterfly';
+import Cap from './Cap';
+
 
 // Utils
 import createName from '@/utils/createName';
 
 // Types
 import type { PropType } from 'vue';
-import Butterfly from './Butterfly';
-import Cap from './Cap';
 
-export type HatStyle = 'none' | 'beanie' | 'turban' | 'butterfly' | 'cap';
+export type HatStyle = 'none' |'butterfly' | 'cap';
 
 export default defineComponent({
   name: createName('avatar', 'hat'),
@@ -27,10 +26,6 @@ export default defineComponent({
       switch (props.type) {
         case 'none':
           return;
-        case 'beanie':
-          return <Beanie color={props.color} />;
-        case 'turban':
-          return <Turban color={props.color} />;
         case 'butterfly':
           return <Butterfly />
         case 'cap':

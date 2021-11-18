@@ -1,4 +1,3 @@
-import { rootCertificates } from 'tls';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -8,11 +7,11 @@ export default defineComponent({
       <svg height="100%"
         xmlns="http://www.w3.org/2000/svg"
         width="100%"
-        version="1.1" viewBox="0 0 1900.82 1384.24"
+        version="1.1" viewBox="0 0 2732 2048"
         style={{
             position: 'absolute',
-            bottom: '42%',
-            right: '12%',
+            bottom: '40%',
+            right: '0',
             transform: 'rotate(-30deg)',
             zIndex: 999
         }}> 
