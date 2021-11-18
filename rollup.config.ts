@@ -19,7 +19,7 @@ export default defineConfig({
       name: 'avatar-player',
       format: 'esm',
       globals: {
-        vue: 'Vue',
+        vue: 'Vue'
       },
     },
     {

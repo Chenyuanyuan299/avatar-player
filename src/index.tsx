@@ -1,9 +1,17 @@
-import withInstall from './utils/withInstall';
 import Avatar, { genConfig } from './Avatar';
+import Ear from './components/Ear';
+import Eyebrow from './components/Eyebrow';
+import Eyes from './components/Eyes';
+import Face from './components/Face';
+import Glasses from './components/Glasses';
+import Hair from './components/Hair';
+import Hat from './components/Hat';
+import Mouth from './components/Mouth';
+import Nose from './components/Nose';
+import Shirt from './components/Shirt';
+export { Ear, Eyebrow, Eyes, Face, Glasses, Hair, Hat, Mouth, Nose, Shirt }
 
-export default withInstall(Avatar);
 export { Avatar, genConfig };
-export type { WithInstall } from './utils/withInstall';
 export type { EarStyle } from './components/Ear';
 export type { EyesStyle } from './components/Eyes';
 export type { GlassesStyle } from './components/Glasses';

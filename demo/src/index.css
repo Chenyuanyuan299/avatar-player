@@ -107,7 +107,7 @@ p{
   text-align: center;
   width: 90px;
   border-radius: 6px;
-  background-color: rgba(245,245,245,0.9);
+  background-color: rgba(58, 58, 58, 0.87);
   transition: all 0.25s;
   box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
 }
@@ -115,9 +115,10 @@ p{
   transform: scale(1.05);
 }
 .choices{
+  position: relative;
   margin-top: 10px;
   display: inline-block;
-  background-color: rgba(58, 58, 58, 0.87);
+  background-color: rgba(245,245,245,0.9);
   width: 60px;
   height: 60px;
   border-radius: 100%;
@@ -133,8 +134,8 @@ p{
   border-bottom: 5px solid transparent;
 }
 .sweep-left{
-  border-left: 10px solid rgba(68, 68, 68, 0.9);
+  border-left: 10px solid rgba(206, 206, 206, 0.9);
 }
 .sweep-right{
-  border-right: 10px solid rgba(68, 68, 68, 0.9);
+  border-right: 10px solid rgba(206, 206, 206, 0.9);
 }
