@@ -7,9 +7,6 @@ import Polo from './Polo';
 import Hoody from './Hoody';
 import Short from './Short';
 
-// Utils
-import createName from '@/utils/createName';
-
 // Types
 import type { PropType } from 'vue';
 
@@ -18,7 +15,7 @@ export type ShirtStyle = 'hoody' | 'short' | 'polo';
 const BRIGHTEN_DEGREE = 1;
 
 export default defineComponent({
-  name: createName('avatar', 'shirt'),
+  name: 'AvatarShirt',
 
   props: {
     color: String,

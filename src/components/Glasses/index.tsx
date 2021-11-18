@@ -4,16 +4,13 @@ import { defineComponent } from 'vue';
 import Round from './Round';
 import Square from './Square';
 
-// Utils
-import createName from '@/utils/createName';
-
 // Types
 import type { PropType } from 'vue';
 
 export type GlassesStyle = 'none' | 'round' | 'square';
 
 export default defineComponent({
-  name: createName('avatar', 'glasses'),
+  name: 'AvatarGlasses',
 
   props: {
     type: String as PropType<GlassesStyle>,

@@ -4,16 +4,13 @@ import { defineComponent } from 'vue';
 import Beanie from './Beanie';
 import Turban from './Turban';
 
-// Utils
-import createName from '@/utils/createName';
-
 // Types
 import type { PropType } from 'vue';
 
 export type HatStyle = 'none' | 'beanie' | 'turban';
 
 export default defineComponent({
-  name: createName('avatar', 'hat'),
+  name: 'AvatarHat',
 
   props: {
     color: String,

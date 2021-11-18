@@ -4,23 +4,20 @@ import { defineComponent } from 'vue';
 import UpMale from './UpMale';
 import UpFemale from './UpFemale';
 
-// Utils
-import createName from '@/utils/createName';
-
 // Types
 import type { PropType } from 'vue';
 
-export type EyeBrowStyle = 'upMale' | 'upFemale';
+export type EyebrowStyle = 'upMale' | 'upFemale';
 
 export default defineComponent({
-  name: createName('avatar', 'eye', 'brow'),
+  name: 'AvatarEyebrow',
 
   props: {
-    type: String as PropType<EyeBrowStyle>,
+    type: String as PropType<EyebrowStyle>,
   },
 
   setup(props) {
-    const renderEyeBrow = () => {
+    const renderEyebrow = () => {
       switch (props.type) {
         case 'upMale':
           return <UpMale />;
@@ -31,6 +28,6 @@ export default defineComponent({
       }
     };
 
-    return () => <>{renderEyeBrow()}</>;
+    return () => <>{renderEyebrow()}</>;
   },
 });

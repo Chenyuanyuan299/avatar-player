@@ -5,16 +5,13 @@ import Oval from './Oval';
 import Smile from './Smile';
 import Circle from './Circle';
 
-// Utils
-import createName from '@/utils/createName';
-
 // Types
 import type { PropType } from 'vue';
 
 export type EyesStyle = 'circle' | 'oval' | 'smile';
 
 export default defineComponent({
-  name: createName('avatar', 'eyes'),
+  name: 'AvatarEyes',
 
   props: {
     type: String as PropType<EyesStyle>,

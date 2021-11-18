@@ -3,7 +3,7 @@ import { PropType, CSSProperties } from 'vue';
 
 // Types
 declare type EarStyle = 'small' | 'big';
-declare type EyeBrowStyle = 'upMale' | 'upFemale';
+declare type EyebrowStyle = 'upMale' | 'upFemale';
 declare type EyesStyle = 'circle' | 'oval' | 'smile';
 declare type GlassesStyle = 'none' | 'round' | 'square';
 declare type HairStyle = 'normal' | 'thick' | 'mohawk' | 'femaleLong' | 'femaleShort';
@@ -27,7 +27,7 @@ interface Configs {
   bgColor?: string;
   hairColorRandom?: boolean;
   earStyle?: EarStyle;
-  eyeBrowStyle?: EyeBrowStyle;
+  eyebrowStyle?: EyebrowStyle;
   eyesStyle?: EyesStyle;
   glassesStyle?: GlassesStyle;
   hairStyle?: HairStyle;
@@ -123,7 +123,7 @@ export {
   AvatarShape,
   AvatarSex,
   EarStyle,
-  EyeBrowStyle,
+  EyebrowStyle,
   EyesStyle,
   GlassesStyle,
   HairStyle,

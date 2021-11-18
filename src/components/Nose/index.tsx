@@ -5,16 +5,13 @@ import Long from './Long';
 import Round from './Round';
 import Short from './Short';
 
-// Utils
-import createName from '@/utils/createName';
-
 // Types
 import type { PropType } from 'vue';
 
 export type NoseStyle = 'short' | 'long' | 'round';
 
 export default defineComponent({
-  name: createName('avatar', 'nose'),
+  name: 'AvatarNose',
 
   props: {
     type: String as PropType<NoseStyle>,

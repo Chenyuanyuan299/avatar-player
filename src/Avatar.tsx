@@ -2,7 +2,7 @@ import { defineComponent } from 'vue';
 
 // Components
 import Ear from './components/Ear';
-import EyeBrow from './components/EyeBrow';
+import Eyebrow from './components/Eyebrow';
 import Eyes from './components/Eyes';
 import Face from './components/Face';
 import Glasses from './components/Glasses';
@@ -12,13 +12,10 @@ import Mouth from './components/Mouth';
 import Nose from './components/Nose';
 import Shirt from './components/Shirt';
 
-// Utils
-import createName from '@/utils/createName';
-
 // Types
 import type { PropType, CSSProperties } from 'vue';
 import type { EarStyle } from './components/Ear';
-import type { EyeBrowStyle } from './components/EyeBrow';
+import type { EyebrowStyle } from './components/Eyebrow';
 import type { EyesStyle } from './components/Eyes';
 import type { GlassesStyle } from './components/Glasses';
 import type { HairStyle } from './components/Hair';
@@ -40,7 +37,7 @@ export interface Configs {
   bgColor?: string;
   hairColorRandom?: boolean;
   earStyle?: EarStyle;
-  eyeBrowStyle?: EyeBrowStyle;
+  eyebrowStyle?: EyebrowStyle;
   eyesStyle?: EyesStyle;
   glassesStyle?: GlassesStyle;
   hairStyle?: HairStyle;
@@ -67,7 +64,7 @@ const bgColor = ['#9287ff', '#6bd9e9', '#fc909f', '#f4d150', '#e0ddff',
   '#d2eff3', '#ffedef', '#ffeba4', '#506af4', '#f48150', '#74d153',
 ];
 const earStyle: EarStyle[] = ['small', 'big'];
-const eyeBrowFemale: EyeBrowStyle[] = ['upMale', 'upFemale'];
+const eyebrowFemale: EyebrowStyle[] = ['upMale', 'upFemale'];
 const eyesStyle: EyesStyle[] = ['circle', 'oval', 'smile'];
 const glassesStyle: GlassesStyle[] = ['round', 'square', 'none'];
 const hairStyleMale: HairStyle[] = ['normal', 'thick', 'mohawk'];
@@ -151,12 +148,12 @@ export const genConfig: GenConfig = (userConfig = {}) => {
   const hairOrHatColor =
     response.hatStyle === 'none' ? response.hairColor : response.hatColor;
 
-  // EyeBrow
-  let myEyeBrowStyle: EyeBrowStyle = userConfig.eyeBrowStyle || 'upMale';
-  if (!userConfig.eyeBrowStyle && response.sex === 'female') {
-    myEyeBrowStyle = pickRandomFromList(eyeBrowFemale);
+  // Eyebrow
+  let myEyebrowStyle: EyebrowStyle = userConfig.eyebrowStyle || 'upMale';
+  if (!userConfig.eyebrowStyle && response.sex === 'female') {
+    myEyebrowStyle = pickRandomFromList(eyebrowFemale);
   }
-  response.eyeBrowStyle = myEyeBrowStyle;
+  response.eyebrowStyle = myEyebrowStyle;
 
   // Shirt Color
   response.shirtColor =
@@ -174,7 +171,7 @@ export const genConfig: GenConfig = (userConfig = {}) => {
 };
 
 export default defineComponent({
-  name: createName('avatar'),
+  name: 'Avatar',
 
   props: {
     id: String,
@@ -275,7 +272,7 @@ export default defineComponent({
                 justifyContent: 'center',
               }}
             >
-              <EyeBrow type={config.eyeBrowStyle} />
+              <Eyebrow type={config.eyebrowStyle} />
               <Eyes type={config.eyesStyle} />
               <Glasses type={config.glassesStyle} />
               <Ear color={config.faceColor} style={config.earStyle} />

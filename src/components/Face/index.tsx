@@ -1,12 +1,9 @@
 import { defineComponent } from 'vue';
 
-// Utils
-import createName from '@/utils/createName';
-
 const WEIGHT = 9999999;
 
 export default defineComponent({
-  name: createName('avatar', 'face'),
+  name: 'AvatarFace',
 
   props: {
     color: {

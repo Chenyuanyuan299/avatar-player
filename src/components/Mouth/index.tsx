@@ -5,16 +5,13 @@ import Laugh from './Laugh';
 import Smile from './Smile';
 import Peace from './Peace';
 
-// Utils
-import createName from '@/utils/createName';
-
 // Types
 import type { PropType } from 'vue';
 
 export type MouthStyle = 'laugh' | 'smile' | 'peace';
 
 export default defineComponent({
-  name: createName('avatar', 'mouth'),
+  name: 'AvatarMouth',
 
   props: {
     type: String as PropType<MouthStyle>,

@@ -7,16 +7,13 @@ import Normal from './Normal';
 import FemaleLong from './FemaleLong';
 import FemaleShort from './FemaleShort';
 
-// Utils
-import createName from '@/utils/createName';
-
 // Types
 import type { PropType } from 'vue';
 
 export type HairStyle = 'normal' | 'thick' | 'mohawk' | 'femaleLong' | 'femaleShort';
 
 export default defineComponent({
-  name: createName('avatar', 'hair'),
+  name: 'AvatarHair',
 
   props: {
     color: String,

@@ -6,9 +6,7 @@ export type WithInstall = {
   install: (app: App) => void;
 };
 
-export default function withInstall<T extends Component>(
-  component: T,
-): WithInstall {
+export default function withInstall<T extends Component>(component: T) : WithInstall {
   return {
     install: (app: App) => {
       const prefixName = 'Hld';
