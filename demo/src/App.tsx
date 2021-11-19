@@ -12,6 +12,7 @@ import Mouth from "avatar-player/components/Mouth/index"
 import Shirt from "avatar-player/components/Shirt/index"
 import './index.css'
 
+
 export default defineComponent({
   name: 'App',
   setup() {

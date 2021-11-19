@@ -49,10 +49,11 @@ export interface Configs {
   sex?: AvatarSex;
 }
 
+
 export type PickRandomFromList = <T>(data: T[], options?: Options<T>) => T;
 export type GenConfig = (configs?: Configs) => Configs;
 
-const faceColor = ['#f9c9b6', '#ac6651'];
+const faceColor = ['#f9c9b6', '#ac6651','#FAEBD7','#FFEFD5','#FFEBCD','#FFE4C4','#FFDAB9','#FFDEAD','#FFE4B5'];
 const hairColor = ['#000', '#fff', '#77311d',
   '#fc909f', '#d2eff3', '#506af4', '#f48150',
 ];
@@ -65,12 +66,12 @@ const bgColor = ['#9287ff', '#6bd9e9', '#fc909f', '#f4d150', '#e0ddff',
 ];
 const earStyle: EarStyle[] = ['small', 'big'];
 const eyebrowFemale: EyebrowStyle[] = ['upMale', 'upFemale'];
-const eyesStyle: EyesStyle[] = ['circle', 'oval', 'smile'];
+const eyesStyle: EyesStyle[] = ['circle', 'oval', 'smile','shining','cry'];
 const glassesStyle: GlassesStyle[] = ['round', 'square', 'none'];
 const hairStyleMale: HairStyle[] = ['normal', 'thick', 'mohawk'];
-const hairStyleFemale: HairStyle[] = ['normal', 'femaleLong', 'femaleShort'];
+const hairStyleFemale: HairStyle[] = ['normal', 'femaleLong', 'femaleShort','boyshort','doublelong','doubleshort','straightlong','straightshort'];
 const hatStyle: HatStyle[] = ['none', 'beanie', 'turban'];
-const mouthStyle: MouthStyle[] = ['laugh', 'smile', 'peace'];
+const mouthStyle: MouthStyle[] = ['laugh', 'smile', 'peace','bobo','kid'];
 const noseStyle: NoseStyle[] = ['short', 'long', 'round'];
 const shirtStyle: ShirtStyle[] = ['hoody', 'short', 'polo'];
 const sex: AvatarSex[] = ['male', 'female'];
