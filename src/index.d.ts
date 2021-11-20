@@ -5,13 +5,13 @@ import { PropType, CSSProperties } from 'vue';
 declare type EarStyle = 'small' | 'big';
 declare type EyebrowStyle = 'upMale' | 'upFemale' | 'human';
 declare type EyesStyle = 'circle' | 'oval' | 'smile'| 'cry' | 'shining';
-declare type GlassesStyle = 'round' | 'square' | 'none';
+declare type GlassesStyle = 'round' | 'square' | 'roundlens' | 'squarelens' | 'flower' | 'star' | 'none';
 declare type HairStyle = 'normal' | 'thick' | 'mohawk' | 'femaleLong' | 'femaleShort'
-  | 'boyshort' | 'doublelong' | 'doubleshort' | 'straightshort' | 'straightlong' ;
+  | 'boyshort' | 'doublelong' | 'doubleshort' | 'straightlong' | 'tall';
 declare type HatStyle = 'beanie' | 'turban' | 'butterfly' | 'cap' | 'none';
 declare type MouthStyle = 'laugh' | 'smile' | 'peace' | 'bobo' | 'kid';
 declare type NoseStyle = 'short' | 'long' | 'round' | 'straight';
-declare type ShirtStyle = 'hoody' | 'short' | 'polo';
+declare type ShirtStyle = 'hoody' | 'short' | 'polo' | 'squareneck' | 'turtleneck';
 declare type AvatarShape = 'circle' | 'rounded' | 'square';
 declare type AvatarSex = 'male' | 'female';
 

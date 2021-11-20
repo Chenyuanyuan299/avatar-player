@@ -3,14 +3,13 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {
     return () => (
-      <svg 
-        height="100%"
+      <svg height="100%"
         xmlns="http://www.w3.org/2000/svg"
         width="100%"
-        version="1.1" viewBox="0 0 6370.82 4384.24"
+        version="1.1" viewBox="0 0 8370.82 6384.24"
         style={{
             position: 'absolute',
-            bottom: '0',
+            bottom: '-10%',
             left: '-8%',
             transform: 'rotate(30deg)',
             zIndex:999
@@ -32,3 +31,4 @@ export default defineComponent({
     );
   },
 });
+

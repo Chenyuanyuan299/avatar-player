@@ -9,12 +9,12 @@ import FemaleShort from './FemaleShort';
 import BoyShort from './BoyShort';
 import DoubleLong from './DoubleLong';
 import DoubleShort from './DoubleShort';
-import StraightShort from './StraightShort';
 import StraightLong from './StraightLong';
+import Tall from './Tall'
 
 // Types
 import type { PropType } from 'vue';
-export type HairStyle = 'normal' | 'thick' | 'mohawk' | 'femaleLong' | 'femaleShort'| 'boyshort' | 'doublelong' | 'doubleshort' | 'straightshort' | 'straightlong' ;
+export type HairStyle = 'normal' | 'thick' | 'mohawk' | 'femaleLong' | 'femaleShort'| 'boyshort' | 'doublelong' | 'doubleshort' | 'straightlong' | 'tall' ;
 
 export default defineComponent({
   name: 'AvatarHair',
@@ -44,8 +44,8 @@ export default defineComponent({
             return <DoubleLong color={props.color} />;
         case 'doubleshort' :
             return <DoubleShort color={props.color} />;
-        case 'straightshort' :
-            return <StraightShort color={props.color} />;
+        case 'tall' :
+            return <Tall color={props.color} />;
         case 'straightlong' :
             return <StraightLong color={props.color} />;
         default:

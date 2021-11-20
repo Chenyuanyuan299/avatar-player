@@ -40,7 +40,7 @@ export default defineComponent({
         case 'squareneck':
           return <Squareneck color={props.color} />;
         case 'turtleneck':
-          return <Turtleneck color={props.color} />;
+          return <Turtleneck color={props.color} lightColor={subColor} />;
         default:
           return <Short color={props.color} />;
       }

@@ -52,26 +52,24 @@ export interface Configs {
 export type PickRandomFromList = <T>(data: T[], options?: Options<T>) => T;
 export type GenConfig = (configs?: Configs) => Configs;
 
-const faceColor = ['#f9c9b6', '#ac6651'];
-const hairColor = ['#000', '#fff', '#77311d',
-  '#fc909f', '#d2eff3', '#506af4', '#f48150',
+const faceColor = ['#f9c9b6', '#ac6651', '#FAEBD7', '#FFEFD5', 
+  '#FFEBCD','#FFE4C4','#FFDAB9','#FFDEAD','#FFE4B5'
 ];
-const hatColor = ['#000', '#fff', '#77311d',
-  '#fc909f', '#d2eff3', '#506af4', '#f48150',
-];
+const hairColor = ['#000', '#fff', '#77311d', '#fc909f', '#d2eff3', '#506af4', '#f48150'];
+const hatColor = ['#000', '#fff', '#77311d', '#fc909f', '#d2eff3', '#506af4', '#f48150'];
 const shirtColor = ['#9287ff', '#6bd9e9', '#fc909f', '#f4d150', '#77311d'];
 const bgColor = ['#9287ff', '#6bd9e9', '#fc909f', '#f4d150', '#e0ddff',
-  '#d2eff3', '#ffedef', '#ffeba4', '#506af4', '#f48150', '#74d153',
-];
+  '#d2eff3', '#ffedef', '#ffeba4', '#506af4', '#f48150', '#74d153',];
 
 const earStyle: EarStyle[] = ['small', 'big'];
 const eyebrowFemale: EyebrowStyle[] = ['upMale', 'upFemale', 'human'];
+const eyebrowMale: EyebrowStyle[] = ['upMale', 'human'];
 const eyesStyle: EyesStyle[] = ['circle', 'oval', 'smile', 'cry', 'shining'];
-const glassesStyle: GlassesStyle[] = ['round', 'square', 'roundlens', 'squarelens', 'none'];
-const hairStyleMale: HairStyle[] = ['normal', 'thick', 'mohawk', 'boyshort', 
-  'doublelong', 'doubleshort', 'straightshort', 'straightlong'];
-const hairStyleFemale: HairStyle[] = ['normal', 'femaleLong', 'femaleShort','normal', 'thick', 'mohawk', 'boyshort', 
-'doublelong', 'doubleshort', 'straightshort', 'straightlong'];
+const glassesStyle: GlassesStyle[] = ['round', 'square', 'roundlens', 'squarelens', 
+  'flower', 'star', 'none'];
+const hairStyleMale: HairStyle[] = ['normal', 'thick', 'mohawk', 'boyshort', 'tall' ]
+const hairStyleFemale: HairStyle[] = ['normal', 'femaleLong', 'femaleShort', 
+  'doublelong', 'doubleshort', 'straightlong'];
 const hatStyle: HatStyle[] = ['beanie', 'turban', 'butterfly', 'cap', 'none'];
 const mouthStyle: MouthStyle[] = ['laugh', 'smile', 'peace', 'bobo', 'kid'];
 const noseStyle: NoseStyle[] = ['short', 'long', 'round', 'straight'];
@@ -132,17 +130,16 @@ export const genConfig: GenConfig = (userConfig = {}) => {
 
   let myHairStyle = userConfig.hairStyle;
   if (!myHairStyle) {
-    // switch (response.sex) {
-    //   case 'male': {
-    //     myHairStyle = pickRandomFromList(hairStyleMale, { usually: ['normal', 'thick'] });
-    //     break;
-    //   }
-    //   case 'female': {
-    //     myHairStyle = pickRandomFromList(hairStyleFemale);
-    //     break;
-    //   }
-    // }
-    myHairStyle = pickRandomFromList(hairStyleFemale);
+    switch (response.sex) {
+      case 'male': {
+        myHairStyle = pickRandomFromList(hairStyleMale, { usually: ['normal', 'thick'] });
+        break;
+      }
+      case 'female': {
+        myHairStyle = pickRandomFromList(hairStyleFemale);
+        break;
+      }
+    }
   }
   response.hairStyle = myHairStyle;
 
@@ -155,10 +152,15 @@ export const genConfig: GenConfig = (userConfig = {}) => {
   // Eyebrow
   let myEyebrowStyle: EyebrowStyle = userConfig.eyebrowStyle || 'upMale';
   if(!userConfig.eyebrowStyle) { 
-    if(response.sex === 'female') { 
-      myEyebrowStyle = pickRandomFromList(eyebrowFemale);
-    } else { 
-      myEyebrowStyle = pickRandomFromList(eyebrowFemale.splice(1, 1));
+    switch (response.sex) {
+      case 'male': {
+        myEyebrowStyle = pickRandomFromList(eyebrowMale);
+        break;
+      }
+      case 'female': {
+        myEyebrowStyle = pickRandomFromList(eyebrowFemale);
+        break;
+      }
     }
   }
   response.eyebrowStyle = myEyebrowStyle;
@@ -263,17 +265,28 @@ export default defineComponent({
                       colorRandom={props.hairColorRandom}
                     />
                   );
-                case 'butterfly':
-                  return (
-                    <>
+                case 'butterfly': { 
+                  if(config.sex === 'male') { 
+                    return ( 
                       <Hair
                         color={config.hairColor}
                         type={config.hairStyle}
                         colorRandom={props.hairColorRandom}
                       />
-                      <Hat color={config.hatColor} type={config.hatStyle} />
-                    </>
-                  );
+                    )
+                  } else { 
+                    return ( 
+                      <>
+                        <Hair
+                          color={config.hairColor}
+                          type={config.hairStyle}
+                          colorRandom={props.hairColorRandom}
+                        />
+                        <Hat color={config.hatColor} type={config.hatStyle} />
+                      </>
+                    )
+                  }
+                }
                 case 'cap':
                   return (
                     <>
