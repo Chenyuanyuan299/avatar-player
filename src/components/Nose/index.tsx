@@ -4,11 +4,12 @@ import { defineComponent } from 'vue';
 import Long from './Long';
 import Round from './Round';
 import Short from './Short';
+import Straight from './Straight';
 
 // Types
 import type { PropType } from 'vue';
 
-export type NoseStyle = 'short' | 'long' | 'round';
+export type NoseStyle = 'short' | 'long' | 'round' | 'straight';
 
 export default defineComponent({
   name: 'AvatarNose',
@@ -26,6 +27,8 @@ export default defineComponent({
           return <Long />;
         case 'round':
           return <Round />;
+        case 'straight':
+          return <Straight />;
         default:
           return <Short />;
       }

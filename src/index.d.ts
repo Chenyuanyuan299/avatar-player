@@ -3,13 +3,14 @@ import { PropType, CSSProperties } from 'vue';
 
 // Types
 declare type EarStyle = 'small' | 'big';
-declare type EyebrowStyle = 'upMale' | 'upFemale';
-declare type EyesStyle = 'circle' | 'oval' | 'smile';
-declare type GlassesStyle = 'none' | 'round' | 'square';
-declare type HairStyle = 'normal' | 'thick' | 'mohawk' | 'femaleLong' | 'femaleShort';
-declare type HatStyle = 'none' | 'beanie' | 'turban';
-declare type MouthStyle = 'laugh' | 'smile' | 'peace';
-declare type NoseStyle = 'short' | 'long' | 'round';
+declare type EyebrowStyle = 'upMale' | 'upFemale' | 'human';
+declare type EyesStyle = 'circle' | 'oval' | 'smile'| 'cry' | 'shining';
+declare type GlassesStyle = 'round' | 'square' | 'none';
+declare type HairStyle = 'normal' | 'thick' | 'mohawk' | 'femaleLong' | 'femaleShort'
+  | 'boyshort' | 'doublelong' | 'doubleshort' | 'straightshort' | 'straightlong' ;
+declare type HatStyle = 'beanie' | 'turban' | 'butterfly' | 'cap' | 'none';
+declare type MouthStyle = 'laugh' | 'smile' | 'peace' | 'bobo' | 'kid';
+declare type NoseStyle = 'short' | 'long' | 'round' | 'straight';
 declare type ShirtStyle = 'hoody' | 'short' | 'polo';
 declare type AvatarShape = 'circle' | 'rounded' | 'square';
 declare type AvatarSex = 'male' | 'female';
@@ -106,14 +107,7 @@ declare const Avatar: vue.DefineComponent<{
   }
 >;
 
-type WithInstall = {
-  install: (app: vue.App) => void;
-};
-declare const _default: WithInstall;
-export default _default;
-
 export {
-  WithInstall,
   Avatar,
   Options,
   Configs,

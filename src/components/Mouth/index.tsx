@@ -4,11 +4,12 @@ import { defineComponent } from 'vue';
 import Laugh from './Laugh';
 import Smile from './Smile';
 import Peace from './Peace';
+import Bobo from './Bobo';
+import Kid from './Kid';
 
 // Types
 import type { PropType } from 'vue';
-
-export type MouthStyle = 'laugh' | 'smile' | 'peace';
+export type MouthStyle = 'laugh' | 'smile' | 'peace' | 'bobo' | 'kid';
 
 export default defineComponent({
   name: 'AvatarMouth',
@@ -20,6 +21,10 @@ export default defineComponent({
   setup(props) {
     const renderMouth = () => {
       switch (props.type) {
+        case 'bobo':
+          return <Bobo />;
+        case 'kid':
+          return <Kid/>;
         case 'laugh':
           return <Laugh />;
         case 'smile':

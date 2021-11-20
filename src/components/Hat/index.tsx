@@ -3,11 +3,12 @@ import { defineComponent } from 'vue';
 // Components
 import Beanie from './Beanie';
 import Turban from './Turban';
+import Butterfly from './Butterfly';
+import Cap from './Cap';
 
 // Types
 import type { PropType } from 'vue';
-
-export type HatStyle = 'none' | 'beanie' | 'turban';
+export type HatStyle = 'beanie' | 'turban' | 'butterfly' | 'cap' | 'none';
 
 export default defineComponent({
   name: 'AvatarHat',
@@ -26,6 +27,10 @@ export default defineComponent({
           return <Beanie color={props.color} />;
         case 'turban':
           return <Turban color={props.color} />;
+          case 'butterfly':
+          return <Butterfly />
+        case 'cap':
+          return <Cap />
         default:
           return;
       }

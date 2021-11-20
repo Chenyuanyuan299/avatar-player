@@ -13,12 +13,12 @@ export default defineComponent({
 
   props: {
     color: String,
-    style: String as PropType<EarStyle>,
+    type: String as PropType<EarStyle>,
   },
 
   setup(props) {
     const renderEar = () => {
-      switch (props.style) {
+      switch (props.type) {
         case 'big':
           return <Big color={props.color} />;
         case 'small':

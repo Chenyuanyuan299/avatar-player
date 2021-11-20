@@ -108,6 +108,7 @@ p{
   width: 90px;
   border-radius: 6px;
   background-color: rgba(58, 58, 58, 0.87);
+  color: rgba(245,245,245,0.9);
   transition: all 0.25s;
   box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
 }
@@ -116,26 +117,51 @@ p{
 }
 .choices{
   position: relative;
-  margin-top: 10px;
-  display: inline-block;
+  margin: 10px 0 15px 0;
+  display: inline-flex;
   background-color: rgba(245,245,245,0.9);
   width: 60px;
   height: 60px;
+  align-items: center;
   border-radius: 100%;
   text-align: center;
+  justify-content: center;
+  overflow: hidden;
 }
-.sweep-left,.sweep-right{
+.img{
+  width: 90%;
+  height: 90%;
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: 50% 50%;
+}
+.com-container{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  height: 100%;
+}
+.com{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  /* display: block !important; */
+}
+.sweep-next,.sweep-last{
   cursor: pointer;
   display: inline-block;
   width: 0;
   height: 0;
   margin: 2px;
+  margin-bottom: 15px;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
 }
-.sweep-left{
+.sweep-next{
   border-left: 10px solid rgba(206, 206, 206, 0.9);
 }
-.sweep-right{
+.sweep-last{
   border-right: 10px solid rgba(206, 206, 206, 0.9);
 }

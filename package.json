@@ -21,8 +21,7 @@
     "prepare": "npm run build:pkg"
   },
   "dependencies": {
-    "chroma-js": "^2.1.2",
-    "lodash": "^4.17.21"
+    "chroma-js": "^2.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",

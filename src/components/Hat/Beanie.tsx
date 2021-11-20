@@ -1,5 +1,4 @@
 import { defineComponent } from 'vue';
-
 import chroma from 'chroma-js';
 
 export default defineComponent({
